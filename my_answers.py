@@ -126,7 +126,7 @@ class NeuralNetwork(object):
         
         # TODO: Output layer - Replace these values with the appropriate calculations.
         
-        return np.dot(self.weights_hidden_to_output.T, hidden_outputs.T)
+        return np.dot(hidden_outputs,self.weights_hidden_to_output)
 
 
 #########################################################
@@ -137,8 +137,9 @@ class NeuralNetwork(object):
 #hidden_nodes = 8
 #output_nodes = 1
 
-iterations = 200
-learning_rate = 0.01
-hidden_nodes = 12
-output_nodes = 1
 
+
+iterations = 6000
+learning_rate = 0.2
+hidden_nodes = [6,20,40,50,60,70]
+output_nodes = 1
